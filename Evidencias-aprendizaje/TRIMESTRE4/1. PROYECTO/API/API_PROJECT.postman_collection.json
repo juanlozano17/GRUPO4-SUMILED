@@ -1,0 +1,483 @@
+{
+  "info": {
+    "_postman_id": "c9418b5a-077c-4cac-930b-06bd27f56b0c",
+    "name": "API_PROJECT",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53376093",
+    "_collection_link": "https://go.postman.co/collection/53376093-c9418b5a-077c-4cac-930b-06bd27f56b0c?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "api",
+      "item": [
+        {
+          "name": "User",
+          "item": [
+            {
+              "name": "Create",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkc29AZ21haWwuY29tIiwiaWF0IjoxNzc5MzEwMTcyLCJleHAiOjE3NzkzMTM3NzJ9.DLv7huhRD7mh8drHTtkjxX_aPw2e1I0OFttqriyRbJU",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"user_user\": \"adso@gmail.com\",\r\n    \"user_password\": \"1234567890\",\r\n    \"userStatus_fk\": 1,\r\n    \"role_fk\": 1\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3001/api/v1/user",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3001",
+                  "path": [
+                    "api",
+                    "v1",
+                    "user"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Login",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\": \"adso@gmail.com\",\r\n    \"password\": \"1234567890\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3001/api/v1/user/login",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3001",
+                  "path": [
+                    "api",
+                    "v1",
+                    "user",
+                    "login"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Show All",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkc29AZ21haWwuY29tIiwiaWF0IjoxNzc5MzEwMzg2LCJleHAiOjE3NzkzMTM5ODZ9.CcjlsDzTsmIHSw-pzxjN4635oIGBU7y-j5RzgS72ABc",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3001/api/v1/user",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3001",
+                  "path": [
+                    "api",
+                    "v1",
+                    "user"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Delete",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3001/api/v1/delete",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3001",
+                  "path": [
+                    "api",
+                    "v1",
+                    "delete"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "userStatus",
+          "item": [
+            {
+              "name": "CreatId",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"userStatus_name\": \"Activo\",\r\n     \"userStatus_description\": \"Act\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3001/api/v1/userStatus",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3001",
+                  "path": [
+                    "api",
+                    "v1",
+                    "userStatus"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Show All",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"userStatus_name\": \"Activo\",\r\n     \"userStatus_description\": \"Act\"\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:3001/api/v1/userStatus",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3001",
+                  "path": [
+                    "api",
+                    "v1",
+                    "userStatus"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "ActualizarId",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"userStatus_name\": \"Activo\",\r\n     \"userStatus_description\": \"Act\"\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:3001/api/v1/userStatus/:id",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3001",
+                  "path": [
+                    "api",
+                    "v1",
+                    "userStatus",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": ""
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Role",
+          "item": [
+            {
+              "name": "GET Show All",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3001/api/v1/role",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3001",
+                  "path": [
+                    "api",
+                    "v1",
+                    "role"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GET Show ld",
+              "request": {
+                "method": "GET",
+                "header": []
+              },
+              "response": []
+            },
+            {
+              "name": "POST Create",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"role_name\": \"Admin2\",\r\n    \"role_description\": \"Admin\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3001/api/v1/role",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3001",
+                  "path": [
+                    "api",
+                    "v1",
+                    "role"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Category",
+      "item": [
+        {
+          "name": "Crear Categoría",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"category_name\": \"Ferretería e Iluminación\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3001/api/v1/category",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3001",
+              "path": [
+                "api",
+                "v1",
+                "category"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener Categorías",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3001/api/v1/category",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3001",
+              "path": [
+                "api",
+                "v1",
+                "category"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Product",
+      "item": [
+        {
+          "name": "Crear Producto",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Lámpara LED Panel\",\r\n  \"description\": \"Lámpara incrustable de alta potencia de 24W\",\r\n  \"price\": 142000.00,\r\n  \"stock\": 45,\r\n  \"image_url\": \"https://images.com/lampara-led.jpg\",\r\n  \"status\": \"active\",\r\n  \"category_id\": 1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3001/api/v1/product",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3001",
+              "path": [
+                "api",
+                "v1",
+                "product"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener Productos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3001/api/v1/product",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3001",
+              "path": [
+                "api",
+                "v1",
+                "product"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar Producto",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{ \"stock\": 10 }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3001/api/v1/product/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3001",
+              "path": [
+                "api",
+                "v1",
+                "product",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar Producto",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3001/api/v1/product/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3001",
+              "path": [
+                "api",
+                "v1",
+                "product",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
