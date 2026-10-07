@@ -1,0 +1,10 @@
+# Ignorar todos los node_modules del proyecto (frontend, backend, etc.)
+**/node_modules/
+
+# Archivos de variables de entorno
+**/.env
+
+# Archivos de build y sistema
+**/dist/
+**/build/
+.DS_Store
