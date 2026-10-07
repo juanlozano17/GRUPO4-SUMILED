@@ -1,0 +1,260 @@
+/* --- CONFIGURACIÓN GENERAL Y PALETA DE COLORES P&P --- */
+:root {
+  --pyp-blue: #0A66C2; /* Azul principal del logo */
+  --pyp-dark: #1D1D1F; /* Texto oscuro y fondo navbar */
+  --pyp-gray-bg: #F5F7FA; /* Fondo general panel */
+  --pyp-input-bg: #E8EDF2; /* Fondo inputs mockup */
+  --pyp-light-gray: #B0B7C3; /* Labels y texto secundario mockup */
+  --pyp-border: #DDE2E6; /* Bordes suaves */
+  --pyp-action: #708090; /* Gris del botón "Iniciar Sesión" del mockup */
+  --pyp-success: #198754; /* Stock Ok */
+  --pyp-danger: #DC3545; /* Stock Low */
+  --font-family-pyp: 'Inter', -apple-system, sans-serif; /* Fuente limpia */
+}
+
+body {
+  font-family: var(--font-family-pyp);
+  background-color: var(--pyp-gray-bg);
+  color: var(--pyp-dark);
+}
+
+/* --- ESTILOS DE LA VISTA 1: LOGIN (Punto 3 y 4 - EL MOCKUP) --- */
+
+.auth-wrapper {
+  min-height: 100vh;
+}
+
+/* Sección Formulario */
+.form-section {
+  background-color: #FFFFFF;
+}
+
+.logo-wrapper {
+  margin-top: -50px; /* Ajuste para subir el logo */
+}
+
+.logo-img {
+  max-width: 130px; /* Tamaño del logo del mockup */
+}
+
+.login-title {
+  font-size: 3rem; /* Tamaño grande mockup */
+  font-weight: 700;
+  color: var(--pyp-dark);
+}
+
+/* Labels de los Inputs (Correo electrónico:, Contraseña:) */
+.auth-label {
+  font-size: 1.1rem;
+  color: var(--pyp-dark);
+  font-weight: 500;
+  margin-bottom: 0.7rem;
+}
+
+/* Inputs del Formulario */
+.auth-input {
+  background-color: var(--pyp-input-bg);
+  border: none;
+  border-radius: 30px; /* Borde muy redondeado */
+  padding: 1.2rem 1.5rem;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.auth-input:focus {
+  background-color: #E2E8F0;
+  box-shadow: 0 0 0 3px rgba(10, 102, 194, 0.2);
+}
+
+/* Checkbox Label (Recordar contraseña) */
+.check-label {
+  color: var(--pyp-light-gray);
+  font-size: 1rem;
+}
+
+/* Botón Iniciar Sesión */
+.btn-iniciar {
+  background-color: var(--pyp-action); /* Gris del mockup */
+  color: #000000;
+  border: none;
+  border-radius: 10px; /* Borde suave */
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-decoration: underline; /* Texto subrayado del mockup */
+  transition: all 0.2s ease;
+}
+
+.btn-iniciar:hover {
+  background-color: #5F6F7E;
+  color: #000000;
+}
+
+/* Footer del Auth (Enlaces) */
+.auth-footer .auth-link, 
+.auth-footer .register-link, 
+.auth-footer .privacy-link {
+  color: var(--pyp-light-gray);
+  text-decoration: underline;
+  font-size: 1rem;
+}
+
+.register-text {
+  color: var(--pyp-dark);
+  font-weight: 500;
+}
+
+.register-link {
+  color: #28A745; /* Verde Regístrate */
+  font-weight: 600;
+}
+
+.privacy-links {
+  border-top: 1px solid var(--pyp-border);
+  padding-top: 1rem;
+}
+
+/* Sección Imagen (Tienda) */
+.store-image-section {
+  background-size: cover;
+  background-position: center;
+  border-left: 20px solid transparent; /* Efecto de separación */
+}
+
+
+/* --- ESTILOS DE LA VISTA 2: PANEL DE INVENTARIO (Punto 2, 4 y 5) --- */
+
+.dashboard-pyp {
+  background-color: var(--pyp-gray-bg);
+  min-height: 100vh;
+}
+
+/* Navbar Pro */
+.navbar-pyp {
+  background-color: var(--pyp-dark) !important;
+  padding: 1rem 0;
+}
+
+.navbar-logo {
+  max-width: 60px;
+  margin-right: 1.5rem;
+}
+
+.navbar-title {
+  color: #FFFFFF !important;
+  font-size: 1.5rem;
+}
+
+/* Cabecera de acciones */
+.header-actions {
+  border-radius: 10px;
+}
+
+.text-pyp {
+  color: var(--pyp-blue);
+  font-weight: 700;
+}
+
+/* Botón + Nuevo Producto (Pro) */
+.btn-pyp-action {
+  background-color: #F8F9FA; /* Gris claro mockup */
+  color: var(--pyp-dark);
+  border: 2px solid var(--pyp-border);
+  border-radius: 10px;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  transition: all 0.2s ease;
+}
+
+.btn-pyp-action:hover {
+  background-color: #E2E8F0;
+  border-color: #C1C9D1;
+}
+
+/* Tabla Pro */
+.table-pyp {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.table-pyp thead {
+  background-color: #FFFFFF;
+}
+
+.table-pyp thead th {
+  color: var(--pyp-light-gray);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 1.5rem 1rem;
+  border-bottom: 2px solid var(--pyp-border);
+}
+
+.table-pyp tbody td {
+  padding: 1.2rem 1rem;
+  font-size: 1rem;
+  border-bottom: 1px solid var(--pyp-border);
+}
+
+/* Columnas especiales */
+.badge-id {
+  background-color: #F0F2F5;
+  color: #333;
+  font-size: 0.9rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.badge-categoria {
+  background-color: #FFFFFF;
+  color: #555;
+  border: 1px solid var(--pyp-border);
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.precio-col {
+  font-size: 1.1rem;
+}
+
+/* Badges de stock */
+.stock-badge {
+  font-size: 1rem;
+  padding: 0.6rem 1rem;
+  border-radius: 30px;
+}
+
+.stock-ok {
+  background-color: rgba(25, 135, 84, 0.1);
+  color: var(--pyp-success);
+}
+
+.stock-low {
+  background-color: rgba(220, 53, 69, 0.1);
+  color: var(--pyp-danger);
+}
+
+
+/* --- ESTILOS DEL MODAL (Añadir Producto) --- */
+
+.modal-pyp {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.bg-pyp {
+  background-color: var(--pyp-blue) !important;
+}
+
+.form-input-pyp {
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  border: 2px solid var(--pyp-border);
+}
+
+.form-input-pyp:focus {
+  border-color: var(--pyp-blue);
+  box-shadow: 0 0 0 3px rgba(10, 102, 194, 0.1);
+}
