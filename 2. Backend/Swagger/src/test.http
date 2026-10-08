@@ -1,0 +1,7 @@
+POST http://localhost:3001/api/usuarios/login
+Content-Type: application/json
+
+{
+  "correo": "santiagoprueba@gmail.com",
+  "contrasena": "123456"
+}
